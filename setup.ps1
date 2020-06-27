@@ -16,6 +16,7 @@ choco install -y `
     git `
     vmwareworkstation `
     PDFXchangeEditor `
+    autohotkey `
     qbittorrent 
 
 # Remove crappy windows applications and reinstall store
@@ -40,6 +41,13 @@ mkdir workspace
 cd workspace
 git clone https://github.com/StevenBlack/hosts hosts
 cd hosts
+python -m pip install --upgrade pip
 python -m pip install --user -r requirements.txt
 python updateHostsFile.py -a -r -e social porn gambling fakenews
 ipconfig /flushdns
+
+# Move ahk to correct folder
+cd C:\Users\user\workspace
+git clone https://github.com/seandheath/winconfig winconfig
+cd winconfig
+cp snap.ahk C:\Users\user\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup\snap.ahk
