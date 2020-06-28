@@ -17,7 +17,13 @@ choco install -y `
     vmwareworkstation `
     PDFXchangeEditor `
     autohotkey `
+    geforce-experience `
+    epicgameslauncher `
     qbittorrent 
+
+# Configure git
+git config --global user.name "Sean Heath"
+git config --global user.email "se@nheath.com"
 
 # Remove crappy windows applications and reinstall store
 Get-AppxPackage -AllUsers | Remove-AppxPackage
@@ -50,4 +56,4 @@ ipconfig /flushdns
 cd C:\Users\user\workspace
 git clone https://github.com/seandheath/winconfig winconfig
 cd winconfig
-cp snap.ahk C:\Users\user\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup\snap.ahk
+cp snap.ahk "C:\Users\user\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup\snap.ahk"

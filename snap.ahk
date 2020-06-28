@@ -94,11 +94,19 @@ GetMonitorIndexFromWindow(windowHandle) {
     return %monitorIndex%
 }
 
+; # win 
+; ! alt 
+; ^ ctrl 
+
 ; Directional Arrow Hotkeys
 #!Up::SnapActiveWindow("top","full","half")
 #!Down::SnapActiveWindow("bottom","full","half")
-^#!Up::SnapActiveWindow("top","full","third")
-^#!Down::SnapActiveWindow("bottom","full","third")
+^#!u::SnapActiveWindow("top","full","third")
+^#!j::SnapActiveWindow("middle","full","third")
+^#!m::SnapActiveWindow("bottom","full","third")
+^#!Left::SnapActiveWindow("full","left","third")
+^#!Up::SnapActiveWindow("full","middle","third")
+^#!Right::SnapActiveWindow("full","right","third")
 
 ; Numberpad Hotkeys (Landscape)
 #!Numpad7::SnapActiveWindow("top","left","half")
