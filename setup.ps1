@@ -68,5 +68,4 @@ npm install --global mermaid-filter
 
 # Add tool folder to path
 mkdir "C:\tools"
-setx path "%path%;c:\tools"
 cp pandoc-crossref.exe "C:\tools\"
