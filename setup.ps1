@@ -19,6 +19,7 @@ choco install -y `
     autohotkey `
     geforce-experience `
     epicgameslauncher `
+    nodejs `
     qbittorrent 
 
 # Configure git
@@ -57,3 +58,15 @@ cd C:\Users\user\workspace
 git clone https://github.com/seandheath/winconfig winconfig
 cd winconfig
 cp snap.ahk "C:\Users\user\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup\snap.ahk"
+
+# Move eisvogel template to the correct folder
+mkdir -p "C:\Users\user\AppData\Roaming\pandoc\templates\"
+cp eisvogel.tex "C:\Users\user\AppData\Roaming\pandoc\templates\eisvogel.latex"
+
+# install mermaid-filter
+npm install --global mermaid-filter
+
+# Add tool folder to path
+mkdir "C:\tools"
+setx path "%path%;c:\tools"
+cp pandoc-crossref.exe "C:\tools\"
