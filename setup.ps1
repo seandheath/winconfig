@@ -7,20 +7,20 @@ choco install -y `
     filezilla `
     malwarebytes `
     resilio-sync-business `
-    keepassxc `
     steam `
     vscode `
     firefox `
-    nextcloud-client `
     7zip `
     git `
     vmwareworkstation `
     PDFXchangeEditor `
     autohotkey `
-    geforce-experience `
-    epicgameslauncher `
     nodejs `
-    qbittorrent 
+    qbittorrent `
+    zettlr `
+    bitwarden `
+    syncthing-gtk
+
 
 # Configure git
 git config --global user.name "Sean Heath"
