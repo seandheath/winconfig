@@ -22,7 +22,9 @@ choco install -y `
     syncthing-gtk `
     microsoft-teams `
     openvpn `
-    GoogleChrome
+    GoogleChrome `
+    golang `
+    calibre 
 
 
 # Configure git
