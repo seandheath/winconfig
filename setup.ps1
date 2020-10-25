@@ -19,7 +19,10 @@ choco install -y `
     qbittorrent `
     zettlr `
     bitwarden `
-    syncthing-gtk
+    syncthing-gtk `
+    microsoft-teams `
+    openvpn `
+    GoogleChrome
 
 
 # Configure git
@@ -48,9 +51,9 @@ mkdir workspace
 cd workspace
 git clone https://github.com/StevenBlack/hosts hosts
 cd hosts
-python -m pip install --upgrade pip
-python -m pip install --user -r requirements.txt
-python updateHostsFile.py -a -r -e social porn gambling fakenews
+py -m pip install --upgrade pip
+py -m pip install --user -r requirements.txt
+py updateHostsFile.py -a -r -e social porn gambling fakenews
 ipconfig /flushdns
 
 # Move ahk to correct folder
