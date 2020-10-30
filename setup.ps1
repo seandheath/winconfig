@@ -5,7 +5,6 @@ Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManage
 choco install -y `
     python3 `
     filezilla `
-    malwarebytes `
     resilio-sync-business `
     steam `
     vscode `
@@ -24,7 +23,9 @@ choco install -y `
     openvpn `
     GoogleChrome `
     golang `
-    calibre 
+    calibre `
+    pandoc `
+    miktex
 
 
 # Configure git
@@ -36,8 +37,8 @@ Get-AppxPackage -AllUsers | Remove-AppxPackage
 Get-AppXPackage *WindowsStore* -AllUsers | Foreach {Add-AppxPackage -DisableDevelopmentMode -Register "$($_.InstallLocation)\AppXManifest.xml"} 
 
 # Enable WSL
-dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /norestart
 dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart
+dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /norestart
 wsl --set-default-version 2
 
 # Show file extensions
