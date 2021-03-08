@@ -1,29 +1,14 @@
-﻿# Install Chocolatey
-Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
-
-# Install Chocolatey Applications
+﻿# Install Chocolatey Applications
 choco install -y `
     python3 `
     filezilla `
-    resilio-sync-business `
-    steam `
     vscode `
     firefox `
     7zip `
-    git `
-    vmwareworkstation `
     PDFXchangeEditor `
     autohotkey `
     nodejs `
-    qbittorrent `
-    zettlr `
-    bitwarden `
-    syncthing-gtk `
-    microsoft-teams `
-    openvpn `
     GoogleChrome `
-    golang `
-    calibre `
     pandoc `
     miktex
 
@@ -47,17 +32,6 @@ Set-Location HKCU:\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced
 Set-ItemProperty . HideFileExt "0"
 Pop-Location
 Stop-Process -processName: Explorer -force
-
-# Set up hosts file
-cd C:\Users\user
-mkdir workspace
-cd workspace
-git clone https://github.com/StevenBlack/hosts hosts
-cd hosts
-py -m pip install --upgrade pip
-py -m pip install --user -r requirements.txt
-py updateHostsFile.py -a -r -e social porn gambling fakenews
-ipconfig /flushdns
 
 # Move ahk to correct folder
 cd C:\Users\user\workspace
